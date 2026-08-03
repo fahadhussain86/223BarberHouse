@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="_ds/modernist-4a2627fc-c592-4d22-ba0a-366a9a92d77c/styles.css">
+<script src="_ds/modernist-4a2627fc-c592-4d22-ba0a-366a9a92d77c/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+  :root{
+    --color-accent:#E6007A; --color-accent-2:#E6007A;
+    --color-accent-100:#ffe3f1; --color-accent-200:#ffc2e0; --color-accent-300:#ff8fc6;
+    --color-accent-400:#ff4da6; --color-accent-500:#f5148a; --color-accent-600:#cc006c;
+    --color-accent-700:#a30057; --color-accent-800:#7a0041; --color-accent-900:#4d0029;
+    --color-accent-2-100:#ffe3f1; --color-accent-2-200:#ffc2e0; --color-accent-2-800:#7a0041;
+    --ink:#141210; --paper:#f3f2f2;
+  }
+  body{margin:0}
+  a{color:var(--color-accent)}
+  a:hover{color:var(--color-accent-600)}
+  @keyframes bh-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @font-face{font-family:_x;src:local("Archivo")}
+</style>
+</helmet>
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#141210"/><rect x="30" y="30" width="40" height="40" fill="#E6007A"/><text x="50" y="59" font-family="Archivo, sans-serif" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">223</text></svg>
+</template>
+<div style="background:var(--paper); color:var(--ink); font-family:var(--font-body); overflow-x:hidden;">
+
+  <!-- ANNOUNCEMENT -->
+  <sc-if value="{{ promoBar }}" hint-placeholder-val="{{ true }}">
+    <div style="background:var(--ink); color:var(--paper); font-size:12px; letter-spacing:.06em; text-transform:uppercase; display:flex; justify-content:center; gap:28px; align-items:center; padding:9px 16px; flex-wrap:wrap;">
+      <span style="color:var(--color-accent-400); font-weight:800;">★ 4.7 on Google</span>
+      <span>Walk-ins welcome</span>
+      <span style="opacity:.55;">/</span>
+      <span>4 Metro Detroit locations</span>
+    </div>
+  </sc-if>
+
+  <!-- NAV -->
+  <header style="position:{{ navPos }}; top:0; z-index:50; background:var(--paper); border-bottom:2px solid var(--color-divider);">
+    <div style="max-width:1240px; margin:0 auto; display:flex; align-items:center; gap:24px; padding:14px 24px;">
+      <a href="#top" style="display:flex; align-items:center; gap:12px; text-decoration:none; margin-right:auto;">
+        <span style="display:grid; place-items:center; width:46px; height:46px; background:var(--ink);"><img src="https://223barberhouse.com/images/logos/223Logo.png" alt="223 Barber House" style="height:32px; width:auto;"></span>
+        <span style="font-family:var(--font-heading); font-weight:800; font-size:17px; letter-spacing:-.01em; color:var(--ink); line-height:1;">223<br><span style="font-size:10px; letter-spacing:.28em; font-weight:600; color:var(--color-accent);">BARBER HOUSE</span></span>
+      </a>
+      <nav style="display:flex; gap:26px; align-items:center;">
+        <a href="#top" style="color:var(--ink); text-decoration:none; font-size:13px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;">Home</a>
+        <a href="#services" style="color:var(--ink); text-decoration:none; font-size:13px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;">Services</a>
+        <a href="#gallery" style="color:var(--ink); text-decoration:none; font-size:13px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;">Gallery</a>
+        <a href="#reviews" style="color:var(--ink); text-decoration:none; font-size:13px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;">Reviews</a>
+        <a href="#contact" style="color:var(--ink); text-decoration:none; font-size:13px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;">Contact</a>
+      </nav>
+      <a href="tel:+15867476748" style="display:none; color:var(--ink); text-decoration:none; font-weight:800; font-size:13px;">(586) 747-6748</a>
+      <a class="btn btn-primary" href="https://barber-house.square.site/" target="_blank" rel="noopener" style="text-decoration:none; padding:10px 18px; font-size:13px; letter-spacing:.03em;">BOOK NOW →</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" style="position:relative; min-height:640px; display:flex; align-items:center; background:var(--ink); overflow:hidden;">
+    <div class="grayscale" style="position:absolute; inset:0;">
+      <img src="https://223barberhouse.com/images/barbershop/barbershop.jpeg" alt="223 Barber House interior" style="width:100%; height:100%; object-fit:cover; opacity:.5;">
+    </div>
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(10,9,8,.92) 0%, rgba(10,9,8,.6) 45%, rgba(10,9,8,.15) 100%);"></div>
+    <div style="position:relative; max-width:1240px; width:100%; margin:0 auto; padding:80px 24px;">
+      <div style="max-width:660px;">
+        <div style="display:inline-flex; align-items:center; gap:10px; margin-bottom:22px;">
+          <span style="width:34px; height:2px; background:var(--color-accent);"></span>
+          <span style="color:var(--color-accent-300); font-size:12px; letter-spacing:.28em; text-transform:uppercase; font-weight:700;">Est. Metro Detroit</span>
+        </div>
+        <h1 style="color:#fff; font-size:clamp(44px,6vw,82px); line-height:.98; letter-spacing:-.02em; margin:0 0 22px; text-transform:uppercase;">Sharp cuts.<br>Clean fades.<br><span style="color:var(--color-accent);">Every time.</span></h1>
+        <p style="color:rgba(255,255,255,.78); font-size:18px; line-height:1.6; max-width:500px; margin:0 0 32px;">Expert barbers for your perfect look — a simple place to unwind, refresh, and walk out sharper than you came in.</p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center;">
+          <a class="btn btn-primary" href="https://barber-house.square.site/" target="_blank" rel="noopener" style="text-decoration:none; padding:15px 26px; font-size:14px; letter-spacing:.04em;">BOOK AN APPOINTMENT →</a>
+          <a class="btn" href="#services" style="text-decoration:none; padding:15px 24px; font-size:14px; letter-spacing:.04em; color:#fff; border:1px solid rgba(255,255,255,.35);">VIEW SERVICES</a>
+        </div>
+        <div style="display:flex; gap:34px; margin-top:46px; flex-wrap:wrap;">
+          <div><div style="font-family:var(--font-heading); font-weight:800; font-size:30px; color:#fff; line-height:1;">4.7★</div><div style="color:rgba(255,255,255,.55); font-size:11px; letter-spacing:.14em; text-transform:uppercase; margin-top:6px;">123 Google reviews</div></div>
+          <div style="width:1px; background:rgba(255,255,255,.2);"></div>
+          <div><div style="font-family:var(--font-heading); font-weight:800; font-size:30px; color:#fff; line-height:1;">4</div><div style="color:rgba(255,255,255,.55); font-size:11px; letter-spacing:.14em; text-transform:uppercase; margin-top:6px;">Locations</div></div>
+          <div style="width:1px; background:rgba(255,255,255,.2);"></div>
+          <div><div style="font-family:var(--font-heading); font-weight:800; font-size:30px; color:#fff; line-height:1;">6</div><div style="color:rgba(255,255,255,.55); font-size:11px; letter-spacing:.14em; text-transform:uppercase; margin-top:6px;">Days a week</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div style="background:var(--color-accent); color:#fff; overflow:hidden; border-top:2px solid var(--ink); border-bottom:2px solid var(--ink);">
+    <div style="display:flex; white-space:nowrap; width:max-content; animation:bh-marquee 26s linear infinite; padding:13px 0;">
+      <span style="font-family:var(--font-heading); font-weight:800; font-size:16px; letter-spacing:.12em; text-transform:uppercase;">&nbsp;CUTS&nbsp;&nbsp;✦&nbsp;&nbsp;FADES&nbsp;&nbsp;✦&nbsp;&nbsp;HOT TOWEL SHAVES&nbsp;&nbsp;✦&nbsp;&nbsp;BEARD GROOMING&nbsp;&nbsp;✦&nbsp;&nbsp;LINE-UPS&nbsp;&nbsp;✦&nbsp;&nbsp;KIDS CUTS&nbsp;&nbsp;✦&nbsp;&nbsp;CUTS&nbsp;&nbsp;✦&nbsp;&nbsp;FADES&nbsp;&nbsp;✦&nbsp;&nbsp;HOT TOWEL SHAVES&nbsp;&nbsp;✦&nbsp;&nbsp;BEARD GROOMING&nbsp;&nbsp;✦&nbsp;&nbsp;LINE-UPS&nbsp;&nbsp;✦&nbsp;&nbsp;KIDS CUTS&nbsp;&nbsp;✦&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section style="max-width:1240px; margin:0 auto; padding:92px 24px; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
+    <div class="grayscale" style="aspect-ratio:4/5; background:var(--color-surface);">
+      <img src="https://223barberhouse.com/images/services/classicCut.jpeg" alt="Barber at work" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+    <div>
+      <div style="display:inline-flex; align-items:center; gap:10px; margin-bottom:20px;">
+        <span style="width:34px; height:2px; background:var(--color-accent);"></span>
+        <span style="color:var(--color-accent); font-size:12px; letter-spacing:.24em; text-transform:uppercase; font-weight:700;">The 223 Standard</span>
+      </div>
+      <h2 style="font-size:clamp(34px,4vw,50px); line-height:1.02; text-transform:uppercase; letter-spacing:-.02em; margin:0 0 22px;">Barbering as a craft, not a queue</h2>
+      <p style="font-size:16px; line-height:1.7; color:color-mix(in srgb, var(--ink) 75%, transparent); margin:0 0 18px;">At 223 Barber House we treat every chair like it matters. Precision fades, sharp line-ups, classic scissor work and hot-towel shaves — done by barbers who take their time and know exactly what they're doing.</p>
+      <p style="font-size:16px; line-height:1.7; color:color-mix(in srgb, var(--ink) 75%, transparent); margin:0 0 30px;">Four Metro Detroit shops, one standard. Walk in or book ahead — either way you leave looking like the best version of yourself.</p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--color-divider); border:2px solid var(--color-divider);">
+        <div style="background:var(--paper); padding:22px;"><div style="font-family:var(--font-heading); font-weight:800; font-size:26px;">Master barbers</div><div style="font-size:13px; color:color-mix(in srgb,var(--ink) 60%, transparent); margin-top:4px;">Years behind the chair</div></div>
+        <div style="background:var(--paper); padding:22px;"><div style="font-family:var(--font-heading); font-weight:800; font-size:26px;">Walk-ins</div><div style="font-size:13px; color:color-mix(in srgb,var(--ink) 60%, transparent); margin-top:4px;">Welcome, or book online</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="background:var(--color-surface); border-top:2px solid var(--color-divider); border-bottom:2px solid var(--color-divider);">
+    <div style="max-width:1240px; margin:0 auto; padding:92px 24px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; margin-bottom:44px;">
+        <div>
+          <div style="display:inline-flex; align-items:center; gap:10px; margin-bottom:18px;">
+            <span style="width:34px; height:2px; background:var(--color-accent);"></span>
+            <span style="color:var(--color-accent); font-size:12px; letter-spacing:.24em; text-transform:uppercase; font-weight:700;">Premium Services</span>
+          </div>
+          <h2 style="font-size:clamp(34px,4vw,52px); line-height:1; text-transform:uppercase; letter-spacing:-.02em; margin:0;">What we do</h2>
+        </div>
+        <p style="max-width:360px; font-size:15px; line-height:1.6; color:color-mix(in srgb,var(--ink) 65%, transparent); margin:0;">Grooming services tailored to your style — from a quick clean-up to the full chair experience.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--color-divider); border:2px solid var(--color-divider);">
+        <article style="background:var(--paper); display:flex; flex-direction:column;">
+          <div class="grayscale" style="aspect-ratio:4/3; overflow:hidden;"><img src="https://223barberhouse.com/images/services/classicCut.jpeg" alt="Classic Haircut" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div style="padding:26px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;"><h3 style="font-size:22px; text-transform:uppercase; margin:0;">Classic Haircut</h3><span style="font-family:var(--font-heading); font-weight:800; color:var(--color-accent); font-size:20px;">$35</span></div>
+            <p style="font-size:14px; line-height:1.6; color:color-mix(in srgb,var(--ink) 65%, transparent); margin:10px 0 0;">Traditional cuts with modern precision — scissor work, tapers and clean necklines.</p>
+          </div>
+        </article>
+        <article style="background:var(--paper); display:flex; flex-direction:column;">
+          <div class="grayscale" style="aspect-ratio:4/3; overflow:hidden;"><img src="https://223barberhouse.com/images/services/bearGrooming.jpeg" alt="Beard Grooming" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div style="padding:26px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;"><h3 style="font-size:22px; text-transform:uppercase; margin:0;">Beard Grooming</h3><span style="font-family:var(--font-heading); font-weight:800; color:var(--color-accent); font-size:20px;">$25</span></div>
+            <p style="font-size:14px; line-height:1.6; color:color-mix(in srgb,var(--ink) 65%, transparent); margin:10px 0 0;">Expert beard styling and maintenance — shaped, lined up and finished with a hot towel.</p>
+          </div>
+        </article>
+        <article style="background:var(--paper); display:flex; flex-direction:column;">
+          <div class="grayscale" style="aspect-ratio:4/3; overflow:hidden;"><img src="https://223barberhouse.com/images/services/hairStyle.jpeg" alt="Hair Styles" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div style="padding:26px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;"><h3 style="font-size:22px; text-transform:uppercase; margin:0;">Hair Styles</h3><span style="font-family:var(--font-heading); font-weight:800; color:var(--color-accent); font-size:20px;">$40</span></div>
+            <p style="font-size:14px; line-height:1.6; color:color-mix(in srgb,var(--ink) 65%, transparent); margin:10px 0 0;">Modern and classic styles for every look — skin fades, textured crops and design work.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- PRICE LIST -->
+      <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top:64px; display:grid; grid-template-columns:1fr 1fr; gap:2px 64px;">
+          <div style="grid-column:1 / -1; margin-bottom:8px;">
+            <span style="color:var(--color-accent); font-size:12px; letter-spacing:.24em; text-transform:uppercase; font-weight:700;">Best Price Chart</span>
+            <h3 style="font-size:clamp(28px,3vw,38px); text-transform:uppercase; letter-spacing:-.01em; margin:8px 0 26px;">Know our rates</h3>
+          </div>
+          <div style="display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:baseline; gap:12px; padding:16px 0; border-bottom:1px solid var(--color-divider);"><span style="font-family:var(--font-heading); font-weight:800; font-size:17px;">Classic Haircut</span><span style="flex:1; border-bottom:1px dotted color-mix(in srgb,var(--ink) 35%, transparent); transform:translateY(-4px);"></span><span style="font-family:var(--font-heading); font-weight:800; color:var(--color-accent); font-size:17px;">$35</span></div>
+            <div style="display:flex; align-items:baseline; gap:12px; padding:16px 0; border-bottom:1px solid var(--color-divider);"><span style="font-family:var(--font-heading); font-weight:800; font-size:17px;">Skin Fade</span><span style="flex:1; border-bottom:1px dotted color-mix(in srgb,var(--ink) 35%, transparent); transform:translateY(-4px);"></span><span style="font-family:var(--font-heading); font-weight:800; color:var(--color-accent); font-size:17px;">$40</span></div>
+            <div style="display:flex; align-items:baseline; gap:12px; padding:16px 0; border-bottom:1px solid var(--color-divider);"><span style="font-family:var(--font-heading); font-weight:800; font-size:17px;">Haircut + Beard</span><span style="flex:1; border-bottom:1px dotted color-mix(in srgb,var(--ink) 35%, transparent); transform:translateY(-4px);"></span><span style="font-family:var(--font-heading); font-weight:800; color:var(--color-accent); font-size:17px;">$55</span></div>
+            <div style="display:flex; align-items:baseline; gap:12px; padding:16px 0; border-bottom:1px solid var(--color-divider);"><span style="font-family:var(--font-heading); font-weight:800; font-size:17px;">Hot Towel Shave</span><span style="flex:1; border-bottom:1px dotted color-mix(in srgb,var(--ink) 35%, transparent); transform:translateY(-4px);"></span><span style="font-family:var(--font-heading); font-weight:800; color:var(--color-accent); font-size:17px;">$40</span></div>
+          </div>
+          <div style="display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:baseline; gap:12px; padding:16px 0; border-bottom:1px solid var(--color-divider);"><span style="font-family:var(--font-heading); font-weight:800; font-size:17px;">Beard Trim &amp; Line-up</span><span style="flex:1; border-bottom:1px dotted color-mix(in srgb,var(--ink) 35%, transparent); transform:translateY(-4px);"></span><span style="font-family:var(--font-heading); font-weight:800; color:var(--color-accent); font-size:17px;">$25</span></div>
+            <div style="display:flex; align-items:baseline; gap:12px; padding:16px 0; border-bottom:1px solid var(--color-divider);"><span style="font-family:var(--font-heading); font-weight:800; font-size:17px;">Kids Cut <span style="font-weight:600; font-size:13px; color:color-mix(in srgb,var(--ink) 55%, transparent);">(12 &amp; under)</span></span><span style="flex:1; border-bottom:1px dotted color-mix(in srgb,var(--ink) 35%, transparent); transform:translateY(-4px);"></span><span style="font-family:var(--font-heading); font-weight:800; color:var(--color-accent); font-size:17px;">$28</span></div>
+            <div style="display:flex; align-items:baseline; gap:12px; padding:16px 0; border-bottom:1px solid var(--color-divider);"><span style="font-family:var(--font-heading); font-weight:800; font-size:17px;">Senior Cut</span><span style="flex:1; border-bottom:1px dotted color-mix(in srgb,var(--ink) 35%, transparent); transform:translateY(-4px);"></span><span style="font-family:var(--font-heading); font-weight:800; color:var(--color-accent); font-size:17px;">$28</span></div>
+            <div style="display:flex; align-items:baseline; gap:12px; padding:16px 0; border-bottom:1px solid var(--color-divider);"><span style="font-family:var(--font-heading); font-weight:800; font-size:17px;">Line-up / Edge-up</span><span style="flex:1; border-bottom:1px dotted color-mix(in srgb,var(--ink) 35%, transparent); transform:translateY(-4px);"></span><span style="font-family:var(--font-heading); font-weight:800; color:var(--color-accent); font-size:17px;">$15</span></div>
+          </div>
+          <p style="grid-column:1 / -1; margin:18px 0 0; font-size:12px; color:color-mix(in srgb,var(--ink) 50%, transparent);">Prices are typical rates and may vary by barber and location. Ask your barber for exact pricing.</p>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section style="max-width:1240px; margin:0 auto; padding:92px 24px;">
+    <div style="text-align:left; margin-bottom:44px;">
+      <div style="display:inline-flex; align-items:center; gap:10px; margin-bottom:16px;">
+        <span style="width:34px; height:2px; background:var(--color-accent);"></span>
+        <span style="color:var(--color-accent); font-size:12px; letter-spacing:.24em; text-transform:uppercase; font-weight:700;">The Chair Crew</span>
+      </div>
+      <h2 style="font-size:clamp(34px,4vw,52px); line-height:1; text-transform:uppercase; letter-spacing:-.02em; margin:0;">Meet the barbers</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:var(--color-divider); border:2px solid var(--color-divider);">
+      <div style="background:var(--paper); padding:0;">
+        <div class="grayscale" style="aspect-ratio:3/4; position:relative;"><image-slot id="bh-barber-1" shape="rect" placeholder="Drop Martin's photo"></image-slot></div>
+        <div style="padding:18px 20px;"><span style="color:var(--color-accent); font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-weight:700;">Master Barber</span><div style="font-family:var(--font-heading); font-weight:800; font-size:19px; text-transform:uppercase; margin-top:4px;">Martin</div></div>
+      </div>
+      <div style="background:var(--paper); padding:0;">
+        <div class="grayscale" style="aspect-ratio:3/4; position:relative;"><image-slot id="bh-barber-2" shape="rect" placeholder="Drop barber photo"></image-slot></div>
+        <div style="padding:18px 20px;"><span style="color:var(--color-accent); font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-weight:700;">Senior Barber</span><div style="font-family:var(--font-heading); font-weight:800; font-size:19px; text-transform:uppercase; margin-top:4px;">Marco</div></div>
+      </div>
+      <div style="background:var(--paper); padding:0;">
+        <div class="grayscale" style="aspect-ratio:3/4; position:relative;"><image-slot id="bh-barber-3" shape="rect" placeholder="Drop barber photo"></image-slot></div>
+        <div style="padding:18px 20px;"><span style="color:var(--color-accent); font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-weight:700;">Barber</span><div style="font-family:var(--font-heading); font-weight:800; font-size:19px; text-transform:uppercase; margin-top:4px;">Dom</div></div>
+      </div>
+      <div style="background:var(--paper); padding:0;">
+        <div class="grayscale" style="aspect-ratio:3/4; position:relative;"><image-slot id="bh-barber-4" shape="rect" placeholder="Drop barber photo"></image-slot></div>
+        <div style="padding:18px 20px;"><span style="color:var(--color-accent); font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-weight:700;">Barber</span><div style="font-family:var(--font-heading); font-weight:800; font-size:19px; text-transform:uppercase; margin-top:4px;">Sam</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" style="background:var(--ink); color:#fff; border-top:2px solid var(--ink);">
+    <div style="max-width:1240px; margin:0 auto; padding:92px 24px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; margin-bottom:40px;">
+        <div>
+          <div style="display:inline-flex; align-items:center; gap:10px; margin-bottom:16px;">
+            <span style="width:34px; height:2px; background:var(--color-accent);"></span>
+            <span style="color:var(--color-accent-300); font-size:12px; letter-spacing:.24em; text-transform:uppercase; font-weight:700;">Our Work</span>
+          </div>
+          <h2 style="font-size:clamp(34px,4vw,52px); line-height:1; text-transform:uppercase; letter-spacing:-.02em; margin:0; color:#fff;">The gallery</h2>
+        </div>
+        <p style="max-width:340px; font-size:15px; line-height:1.6; color:rgba(255,255,255,.6); margin:0;">Signature cuts, styles and transformations, fresh out the chair.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:rgba(255,255,255,.14); border:2px solid rgba(255,255,255,.14);">
+        <div class="grayscale" style="aspect-ratio:1/1; overflow:hidden;"><img src="https://223barberhouse.com/images/gallery/IMG_0969.jpg" alt="Gallery" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="grayscale" style="aspect-ratio:1/1; overflow:hidden;"><img src="https://223barberhouse.com/images/gallery/IMG_7092.jpeg" alt="Gallery" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="grayscale" style="aspect-ratio:1/1; overflow:hidden;"><img src="https://223barberhouse.com/images/gallery/IMG_0945.PNG" alt="Gallery" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="grayscale" style="aspect-ratio:1/1; overflow:hidden;"><img src="https://223barberhouse.com/images/gallery/IMG_0953.jpg" alt="Gallery" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="grayscale" style="aspect-ratio:1/1; overflow:hidden;"><img src="https://223barberhouse.com/images/gallery/IMG_0970.jpg" alt="Gallery" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="grayscale" style="aspect-ratio:1/1; overflow:hidden;"><img src="https://223barberhouse.com/images/gallery/IMG_0967.jpg" alt="Gallery" style="width:100%;height:100%;object-fit:cover;"></div>
+      </div>
+      <div style="margin-top:30px;"><a class="btn" href="https://www.instagram.com/explore/locations/" target="_blank" rel="noopener" style="text-decoration:none; color:#fff; border:1px solid rgba(255,255,255,.35); padding:13px 22px; font-size:13px; letter-spacing:.04em;">FOLLOW US ON INSTAGRAM →</a></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" style="max-width:1240px; margin:0 auto; padding:92px 24px;">
+    <div style="display:grid; grid-template-columns:340px 1fr; gap:56px; align-items:start;">
+      <div>
+        <div style="display:inline-flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <span style="width:34px; height:2px; background:var(--color-accent);"></span>
+          <span style="color:var(--color-accent); font-size:12px; letter-spacing:.24em; text-transform:uppercase; font-weight:700;">Reviews</span>
+        </div>
+        <h2 style="font-size:clamp(34px,4vw,48px); line-height:1; text-transform:uppercase; letter-spacing:-.02em; margin:0 0 24px;">What clients say</h2>
+        <div style="display:flex; align-items:baseline; gap:14px; padding-bottom:18px; border-bottom:2px solid var(--color-divider);">
+          <span style="font-family:var(--font-heading); font-weight:800; font-size:56px; line-height:1;">4.7</span>
+          <div><div style="color:var(--color-accent); font-size:20px; letter-spacing:2px;">★★★★★</div><div style="font-size:13px; color:color-mix(in srgb,var(--ink) 60%, transparent); margin-top:2px;">Based on 123 Google reviews</div></div>
+        </div>
+        <a class="btn btn-primary" href="https://g.page/r/CQnXgQxQZQZQEAE/review" target="_blank" rel="noopener" style="text-decoration:none; margin-top:22px; padding:13px 22px; font-size:13px; letter-spacing:.04em;">LEAVE A REVIEW →</a>
+      </div>
+      <div>
+        <div style="overflow:hidden; border:2px solid var(--color-divider);">
+          <div style="display:flex; transform:{{ trackX }}; transition:transform .45s cubic-bezier(.4,0,.2,1);">
+            <div style="min-width:100%; padding:40px 44px; background:var(--color-surface);">
+              <div style="color:var(--color-accent); font-size:18px; letter-spacing:2px; margin-bottom:18px;">★★★★★</div>
+              <p style="font-size:20px; line-height:1.6; margin:0 0 26px; font-weight:400;">"Martin is one of the best barbers that has ever touched my hair. He was super polite, kept conversation, and makes sure all his clients are comfortable throughout the cut. I will 100% be coming back!!"</p>
+              <div style="display:flex; align-items:center; gap:12px;"><div style="width:42px; height:42px; background:var(--color-accent); color:#fff; display:grid; place-items:center; font-family:var(--font-heading); font-weight:800;">M</div><div><div style="font-family:var(--font-heading); font-weight:800; font-size:15px;">Mumu</div><div style="font-size:12px; color:color-mix(in srgb,var(--ink) 55%, transparent);">Google · 3 weeks ago</div></div></div>
+            </div>
+            <div style="min-width:100%; padding:40px 44px; background:var(--color-surface);">
+              <div style="color:var(--color-accent); font-size:18px; letter-spacing:2px; margin-bottom:18px;">★★★★★</div>
+              <p style="font-size:20px; line-height:1.6; margin:0 0 26px; font-weight:400;">"This is the #1 barbershop in Michigan hands down! Every time I get a haircut here, I feel like a changed man. Everyone is super nice and the atmosphere is amazing!"</p>
+              <div style="display:flex; align-items:center; gap:12px;"><div style="width:42px; height:42px; background:var(--color-accent); color:#fff; display:grid; place-items:center; font-family:var(--font-heading); font-weight:800;">J</div><div><div style="font-family:var(--font-heading); font-weight:800; font-size:15px;">Jason R.</div><div style="font-size:12px; color:color-mix(in srgb,var(--ink) 55%, transparent);">Google review</div></div></div>
+            </div>
+            <div style="min-width:100%; padding:40px 44px; background:var(--color-surface);">
+              <div style="color:var(--color-accent); font-size:18px; letter-spacing:2px; margin-bottom:18px;">★★★★★</div>
+              <p style="font-size:20px; line-height:1.6; margin:0 0 26px; font-weight:400;">"Been going here for 7 years, always taken care of me. I've used a few different barbers and all have been great. The go-to spot for a high quality cut."</p>
+              <div style="display:flex; align-items:center; gap:12px;"><div style="width:42px; height:42px; background:var(--color-accent); color:#fff; display:grid; place-items:center; font-family:var(--font-heading); font-weight:800;">D</div><div><div style="font-family:var(--font-heading); font-weight:800; font-size:15px;">David K.</div><div style="font-size:12px; color:color-mix(in srgb,var(--ink) 55%, transparent);">Google review</div></div></div>
+            </div>
+            <div style="min-width:100%; padding:40px 44px; background:var(--color-surface);">
+              <div style="color:var(--color-accent); font-size:18px; letter-spacing:2px; margin-bottom:18px;">★★★★★</div>
+              <p style="font-size:20px; line-height:1.6; margin:0 0 26px; font-weight:400;">"Walked in and got a good cut within ten minutes. Barbers were friendly and it was a great atmosphere. Thanks for the quick cut!"</p>
+              <div style="display:flex; align-items:center; gap:12px;"><div style="width:42px; height:42px; background:var(--color-accent); color:#fff; display:grid; place-items:center; font-family:var(--font-heading); font-weight:800;">A</div><div><div style="font-family:var(--font-heading); font-weight:800; font-size:15px;">Anthony P.</div><div style="font-size:12px; color:color-mix(in srgb,var(--ink) 55%, transparent);">Google review</div></div></div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:22px;">
+          <div style="display:flex; gap:8px;">
+            <button onClick="{{ goto0 }}" style="width:26px; height:6px; border:0; cursor:pointer; padding:0; background:{{ dot0 }};"></button>
+            <button onClick="{{ goto1 }}" style="width:26px; height:6px; border:0; cursor:pointer; padding:0; background:{{ dot1 }};"></button>
+            <button onClick="{{ goto2 }}" style="width:26px; height:6px; border:0; cursor:pointer; padding:0; background:{{ dot2 }};"></button>
+            <button onClick="{{ goto3 }}" style="width:26px; height:6px; border:0; cursor:pointer; padding:0; background:{{ dot3 }};"></button>
+          </div>
+          <div style="display:flex; gap:10px;">
+            <button class="btn btn-secondary" onClick="{{ prev }}" style="width:44px; height:44px; padding:0; font-size:18px;">←</button>
+            <button class="btn btn-secondary" onClick="{{ next }}" style="width:44px; height:44px; padding:0; font-size:18px;">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIFT / PROMO POSTER -->
+  <section style="background:var(--color-accent); color:#fff; border-top:2px solid var(--ink); border-bottom:2px solid var(--ink);">
+    <div style="max-width:1240px; margin:0 auto; padding:72px 24px; display:grid; grid-template-columns:1.4fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div style="font-size:12px; letter-spacing:.28em; text-transform:uppercase; font-weight:700; opacity:.85; margin-bottom:16px;">Gift Cards &amp; Offers</div>
+        <h2 style="font-size:clamp(34px,4.4vw,60px); line-height:.98; text-transform:uppercase; letter-spacing:-.02em; margin:0 0 18px; color:#fff;">Gift the perfect cut</h2>
+        <p style="font-size:17px; line-height:1.6; max-width:520px; margin:0; color:rgba(255,255,255,.9);">Digital gift cards in any amount, redeemable at all four locations. And first-timers get <strong>$5 off</strong> their first visit — just mention it at the chair.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <a class="btn" href="https://barber-house.square.site/" target="_blank" rel="noopener" style="text-decoration:none; background:#fff; color:var(--color-accent); padding:16px 24px; font-size:14px; letter-spacing:.04em; justify-content:flex-start;">BUY A GIFT CARD →</a>
+        <a class="btn" href="tel:+15867476748" style="text-decoration:none; color:#fff; border:1px solid rgba(255,255,255,.6); padding:16px 24px; font-size:14px; letter-spacing:.04em; justify-content:flex-start;">CALL (586) 747-6748</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS + MAP + CONTACT -->
+  <section id="contact" style="max-width:1240px; margin:0 auto; padding:92px 24px;">
+    <div style="display:inline-flex; align-items:center; gap:10px; margin-bottom:16px;">
+      <span style="width:34px; height:2px; background:var(--color-accent);"></span>
+      <span style="color:var(--color-accent); font-size:12px; letter-spacing:.24em; text-transform:uppercase; font-weight:700;">Visit Us</span>
+    </div>
+    <h2 style="font-size:clamp(34px,4vw,52px); line-height:1; text-transform:uppercase; letter-spacing:-.02em; margin:0 0 40px;">Four shops. One standard.</h2>
+
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:var(--color-divider); border:2px solid var(--color-divider); margin-bottom:48px;">
+      <div style="background:var(--paper); padding:26px; display:flex; flex-direction:column; gap:14px;">
+        <div><h3 style="font-size:20px; text-transform:uppercase; margin:0 0 6px;">Hall Rd</h3><p style="font-size:14px; line-height:1.5; color:color-mix(in srgb,var(--ink) 65%, transparent); margin:0;">15377 Hall Rd<br>Macomb, MI 48044</p></div>
+        <a class="btn btn-primary" href="https://223barberhouse.com/barbers/hall-rd/" target="_blank" rel="noopener" style="text-decoration:none; margin-top:auto; padding:11px 16px; font-size:12px; letter-spacing:.04em;">BOOK NOW →</a>
+      </div>
+      <div style="background:var(--paper); padding:26px; display:flex; flex-direction:column; gap:14px;">
+        <div><h3 style="font-size:20px; text-transform:uppercase; margin:0 0 6px;">Shelby</h3><p style="font-size:14px; line-height:1.5; color:color-mix(in srgb,var(--ink) 65%, transparent); margin:0;">8174 23 Mile Rd<br>Shelby Twp, MI</p></div>
+        <a class="btn btn-primary" href="https://223barberhouse.com/barbers/shelby/" target="_blank" rel="noopener" style="text-decoration:none; margin-top:auto; padding:11px 16px; font-size:12px; letter-spacing:.04em;">BOOK NOW →</a>
+      </div>
+      <div style="background:var(--paper); padding:26px; display:flex; flex-direction:column; gap:14px;">
+        <div><h3 style="font-size:20px; text-transform:uppercase; margin:0 0 6px;">Rochester</h3><p style="font-size:14px; line-height:1.5; color:color-mix(in srgb,var(--ink) 65%, transparent); margin:0;">111 S Main St<br>Rochester, MI</p></div>
+        <a class="btn btn-primary" href="https://223barberhouse.com/barbers/rochester/" target="_blank" rel="noopener" style="text-decoration:none; margin-top:auto; padding:11px 16px; font-size:12px; letter-spacing:.04em;">BOOK NOW →</a>
+      </div>
+      <div style="background:var(--paper); padding:26px; display:flex; flex-direction:column; gap:14px;">
+        <div><h3 style="font-size:20px; text-transform:uppercase; margin:0 0 6px;">15 Mile</h3><p style="font-size:14px; line-height:1.5; color:color-mix(in srgb,var(--ink) 65%, transparent); margin:0;">35818 Van Dyke Ave<br>Sterling Heights, MI</p></div>
+        <a class="btn btn-primary" href="https://barber-house.square.site/" target="_blank" rel="noopener" style="text-decoration:none; margin-top:auto; padding:11px 16px; font-size:12px; letter-spacing:.04em;">BOOK NOW →</a>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1.3fr 1fr; gap:2px; background:var(--color-divider); border:2px solid var(--color-divider);">
+      <div style="background:var(--color-surface); min-height:400px;">
+        <iframe title="223 Barber House — Hall Rd" src="https://www.google.com/maps?q=15377+Hall+Rd,+Macomb,+MI+48044&output=embed" style="width:100%; height:100%; min-height:400px; border:0; display:block; filter:grayscale(1) contrast(1.05);" loading="lazy"></iframe>
+      </div>
+      <div style="background:var(--ink); color:#fff; padding:44px;">
+        <h3 style="font-size:26px; text-transform:uppercase; margin:0 0 26px; color:#fff;">Hours &amp; Contact</h3>
+        <div style="display:flex; flex-direction:column; gap:2px; margin-bottom:30px;">
+          <div style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid rgba(255,255,255,.16); font-size:15px;"><span style="color:rgba(255,255,255,.7);">Monday</span><span style="font-family:var(--font-heading); font-weight:800;">12:00 – 8:00 PM</span></div>
+          <div style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid rgba(255,255,255,.16); font-size:15px;"><span style="color:rgba(255,255,255,.7);">Tue – Sat</span><span style="font-family:var(--font-heading); font-weight:800;">10:00 – 8:00 PM</span></div>
+          <div style="display:flex; justify-content:space-between; padding:12px 0; font-size:15px;"><span style="color:rgba(255,255,255,.7);">Sunday</span><span style="font-family:var(--font-heading); font-weight:800; color:var(--color-accent-300);">Closed</span></div>
+        </div>
+        <a href="tel:+15867476748" style="display:block; text-decoration:none; color:#fff; margin-bottom:18px;"><div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.55);">Call to book</div><div style="font-family:var(--font-heading); font-weight:800; font-size:24px;">(586) 747-6748</div></a>
+        <a class="btn btn-primary" href="https://barber-house.square.site/" target="_blank" rel="noopener" style="text-decoration:none; width:100%; padding:15px; font-size:14px; letter-spacing:.04em; justify-content:flex-start;">BOOK ONLINE →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--ink); color:#fff; border-top:2px solid var(--color-accent);">
+    <div style="max-width:1240px; margin:0 auto; padding:64px 24px 30px; display:grid; grid-template-columns:1.4fr 1fr 1fr 1.2fr; gap:40px;">
+      <div>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;"><img src="https://223barberhouse.com/images/logos/223Logo.png" alt="223 Barber House" style="height:44px; width:auto;"><span style="font-family:var(--font-heading); font-weight:800; font-size:18px;">223 BARBER HOUSE</span></div>
+        <p style="font-size:14px; line-height:1.6; color:rgba(255,255,255,.6); max-width:280px; margin:0;">Expert barbers for your perfect look — a simple place to unwind and refresh. Four Metro Detroit locations.</p>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--color-accent-300); margin-bottom:16px;">Explore</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px;">
+          <a href="#top" style="color:rgba(255,255,255,.8); text-decoration:none;">Home</a>
+          <a href="#services" style="color:rgba(255,255,255,.8); text-decoration:none;">Services</a>
+          <a href="#gallery" style="color:rgba(255,255,255,.8); text-decoration:none;">Gallery</a>
+          <a href="#reviews" style="color:rgba(255,255,255,.8); text-decoration:none;">Reviews</a>
+          <a href="#contact" style="color:rgba(255,255,255,.8); text-decoration:none;">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--color-accent-300); margin-bottom:16px;">Hours</div>
+        <div style="font-size:14px; line-height:1.9; color:rgba(255,255,255,.7);">Mon 12–8 PM<br>Tue–Sat 10–8 PM<br>Sun Closed</div>
+        <a href="tel:+15867476748" style="display:inline-block; margin-top:14px; color:#fff; text-decoration:none; font-family:var(--font-heading); font-weight:800; font-size:16px;">(586) 747-6748</a>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--color-accent-300); margin-bottom:16px;">Stay Sharp</div>
+        <p style="font-size:13px; color:rgba(255,255,255,.6); margin:0 0 12px;">Cuts, offers and new-barber news.</p>
+        <div style="display:flex; gap:2px; border:1px solid rgba(255,255,255,.28);">
+          <input class="input" type="email" placeholder="Email address" style="background:transparent; color:#fff; border:0; border-radius:0;">
+          <a class="btn btn-primary" href="https://barber-house.square.site/" target="_blank" rel="noopener" style="text-decoration:none; border-radius:0; padding:0 18px; white-space:nowrap;">JOIN</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.14);"><div style="max-width:1240px; margin:0 auto; padding:20px 24px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:12px; color:rgba(255,255,255,.45);"><span>© 2026 223 Barber House. All rights reserved.</span><span>Sharp cuts · Clean fades · Metro Detroit</span></div></div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;promoBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showPrices&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;stickyNav&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+class Component extends DCLogic {
+  state = { ri: 0 };
+  go(i){ const n = ((i % 4) + 4) % 4; this.setState({ ri: n }); }
+  renderVals(){
+    const ri = this.state.ri;
+    const dot = (i)=> i===ri ? 'var(--color-accent)' : 'color-mix(in srgb, var(--ink) 25%, transparent)';
+    return {
+      promoBar: this.props.promoBar ?? true,
+      showPrices: this.props.showPrices ?? true,
+      navPos: (this.props.stickyNav ?? true) ? 'sticky' : 'static',
+      trackX: `translateX(-${ri * 100}%)`,
+      prev: ()=> this.go(ri - 1),
+      next: ()=> this.go(ri + 1),
+      goto0: ()=> this.go(0), goto1: ()=> this.go(1), goto2: ()=> this.go(2), goto3: ()=> this.go(3),
+      dot0: dot(0), dot1: dot(1), dot2: dot(2), dot3: dot(3),
+    };
+  }
+}
+</script>
+</body>
+</html>
